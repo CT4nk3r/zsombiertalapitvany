@@ -1,1 +1,0 @@
-# zsombiertalapitvany.github.io
