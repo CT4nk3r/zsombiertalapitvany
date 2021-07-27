@@ -331,13 +331,13 @@ nav a:focus{
     margin:1em;
 }
 
-/* @media (min-width: 40rem){
+@media (min-width: 40rem){
     .gallery-item{
         width: 50%;
         float: left;
     }
 }
-@media (min-width: 60rem){
+/* @media (min-width: 60rem){
     .gallery-item{
         width: 33.333%;
         overflow: hidden;
