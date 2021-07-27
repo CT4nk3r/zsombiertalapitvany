@@ -342,12 +342,6 @@ nav a:focus{
         width: 33.333%;
         overflow: hidden;
     }
-    /* .gallery-description{
-        transform: translateY(150%);
-    }
-    .gallery-item:hover .gallery-description{
-        transform: translateY(0%);
-    } */
 }
 
 /* CTA
