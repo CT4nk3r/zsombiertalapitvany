@@ -40,18 +40,18 @@ img{
 }
 
 @media(min-width: 40rem){
-    [class^=col-]{
+    .col-3,.col-1{
         float: left;
         padding: 0 .5em;
         margin-top: 0;
     }
 
-    [class^=col-]:first-child{
+    .col-3:first-child,.col-1:first-child{
         padding-left: 0;
     
     }
 
-    [class^=col-]:last-child{
+    .col-3:last-child,.col-1:last-child{
         padding-right: 0;
     }
 
