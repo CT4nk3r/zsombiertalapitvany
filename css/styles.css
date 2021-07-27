@@ -1,5 +1,5 @@
 @import 
-url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
+url('https://fonts.googleapis.com/css?family=Raleway:wght@300;400;700;900');
 
 *{
     box-sizing: border-box;
@@ -7,7 +7,7 @@ url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;70
 
 body{
     margin: 0;
-    font-family: 'Lexend';
+    font-family: 'Raleway';
     text-align: center;
 }
 
@@ -16,8 +16,18 @@ img{
     height: auto;
 }
 
+.logo{
+    display: none;
+}
+
 /*typography
 ----------------*/
+h1{
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
 
 .container{
     width: 95%;
@@ -27,6 +37,8 @@ img{
 .title{
     font-size: 2.5rem;
     margin-bottom: 1.5em;
+    font-weight: 900;
+    margin-top: 1em;
 }
 
 .title span{
@@ -34,9 +46,17 @@ img{
     display: block;
     font-size: .9em;
 }
-@media (min-width: ){
 
+@media (min-width: 60rem){
+    .logo{
+        float: left;
+        display: block;
+    }
+    nav{
+        float: right;
+    }
 }
+
 /*button
 ----------------*/
 
@@ -57,7 +77,13 @@ img{
 .button-accent:hover,
 .button-accent:focus{
     background:springgreen;
-    color: grey;
+    color: #232323;
+}
+
+@media (mind-width:60rem){
+    .button{
+        font-size: 1.5rem;
+    }
 }
 
 /*header
@@ -66,7 +92,7 @@ header{
     left: 0;
     right: 0;
     position: absolute;
-    margin-top: 1em;
+    margin: 1em;
 }
 
 nav ul{
@@ -86,20 +112,102 @@ nav a{
     text-transform: uppercase;
     font-size: .8rem;
     padding: .5em;
-    /* background: pink; */
+    background: royalblue;
     color: snow;
 }
 
 nav a:hover,
 nav a:focus{
-    color: seagreen;
+    color: lightblue;
 }
+
+
+@media (min-width: 60rem){
+    .title{
+        font-size: 3.3rem;
+    }
+}
+
 
 /* home-hero
 ----------------*/
 
 .home-hero{
     background-image: url(../img/background.png);
+    background-size: cover;
+    background-position: center;
     padding: 10em 0;
-    color: snow;
+
+}
+
+@media (min-width:60rem){
+    .home-hero{
+        height: 100vh;
+        padding-top: 40vh;
+    }
+} 
+
+.headertext{
+    color:springgreen;
+    background-color: rgba(0, 60, 240, 0.450);
+}
+
+
+/* home-about
+----------------*/
+
+.home-about-textbox{
+    background-color: #232323;
+    padding:4em;
+    width: 100vw;
+    margin-left: -2.5vw;
+    outline: 2px solid springgreen;
+    outline-offset: -3em;
+    color: white;
+    position: relative;
+}
+
+.home-about-textbox h1{
+    color: springgreen;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .3em;
+    background:#232323;
+    padding: 0 .3em;
+}
+
+@media (min-width: 25rem){
+    h1{
+        font-size: 2.5rem;
+    }
+}
+
+.home-about-textbox h1{
+    top: .65em;
+    padding:0 .325em;
+}
+
+@media (min-width: 60rem){
+    h1{
+        font-size: 2.6rem;
+    }
+    .home-about{
+        background-image: url(../img/about.jpg);
+        background-repeat: no-repeat;
+        padding:5em;
+    }
+    .home-about-textbox{
+        width: 40%;
+        margin-left: -2.5%;
+        text-align: left;
+        box-shadow: 0 0 3em 0 rgba(0, 0, 0, .75);
+    }
+}
+
+.home-about-textbox h1{
+    top: .5em;
+    padding:0 .6em;
+    left: 0;
+    transform: translateX(0);
 }
