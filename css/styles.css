@@ -123,6 +123,10 @@ nav a:focus{
 
 
 @media (min-width: 60rem){
+    p{
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
     .title{
         font-size: 3.3rem;
     }
@@ -199,6 +203,7 @@ nav a:focus{
     }
     .home-about-textbox{
         width: 40%;
+        size: 3em;
         margin-left: -2.5%;
         text-align: left;
         box-shadow: 0 0 3em 0 rgba(0, 0, 0, .75);
