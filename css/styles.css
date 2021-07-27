@@ -3,6 +3,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:wght@300;400;700;900');
 
 *{
     box-sizing: border-box;
+    transition: all ease-in-out 250ms;
 }
 
 body{
@@ -20,6 +21,50 @@ img{
     display: none;
 }
 
+/* column system
+----------------*/
+
+[class^=col-]{
+    width: 100%;
+    margin-top: 1em;
+}
+
+[class^=col-]:first-child{
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.col-1{
+    width: 33.3333%;
+    float: left;
+}
+
+@media(min-width: 40rem){
+    [class^=col-]{
+        float: left;
+        padding: 0 .5em;
+        margin-top: 0;
+    }
+
+    [class^=col-]:first-child{
+        padding-left: 0;
+    
+    }
+
+    [class^=col-]:last-child{
+        padding-right: 0;
+    }
+
+    .col-3{
+        width: 50%;
+        text-align: left;
+    }
+    
+    .col-1{
+        width: 16.6666%;
+    }
+}
+
 /*typography
 ----------------*/
 h1{
@@ -34,6 +79,14 @@ h1{
     margin: 0 auto;
 }
 
+.clearfix::after,
+section::after,
+footer::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .title{
     font-size: 2.5rem;
     margin-bottom: 1.5em;
@@ -45,6 +98,16 @@ h1{
     font-weight: 300;
     display: block;
     font-size: .9em;
+}
+
+.title-cta{
+    margin: 0 0 .5em;
+}
+
+.unstyled-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;    
 }
 
 @media (min-width: 60rem){
@@ -70,14 +133,31 @@ h1{
     padding: .5em 1.75em;
 }
 
+.button-small{
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
 .button-accent{
     color: springgreen;
     border-color: springgreen;
 }
+
 .button-accent:hover,
 .button-accent:focus{
     background:springgreen;
     color: #232323;
+}
+
+.button-dark{
+    color: #232323;
+    border-color: #232323;
+}
+
+.button-dark:hover,
+.button-dark:focus{
+    background:#232323;
+    color: springgreen;
 }
 
 @media (mind-width:60rem){
@@ -153,7 +233,8 @@ nav a:focus{
 
 .headertext{
     color:springgreen;
-    background-color: rgba(0, 60, 240, 0.450);
+    background-clip: content-box;
+    background-color: rgba(59, 87, 172, 0.45);
 }
 
 
@@ -169,6 +250,7 @@ nav a:focus{
     outline-offset: -3em;
     color: white;
     position: relative;
+    font-weight: 400;
 }
 
 .home-about-textbox h1{
@@ -192,7 +274,7 @@ nav a:focus{
     padding:0 .325em;
 }
 
-@media (min-width: 60rem){
+@media (min-width: 70rem){
     h1{
         font-size: 2.6rem;
     }
@@ -215,4 +297,75 @@ nav a:focus{
     padding:0 .6em;
     left: 0;
     transform: translateX(0);
+}
+
+/* gallery
+----------------*/
+
+.gallery{
+    margin: 3em 0 0;
+}
+
+.gallery-item img{
+    width: 100%;
+    display: block;
+}
+
+.gallery-item{
+    margin: 0;
+    position: relative;
+}
+
+.gallery-description{
+    position: absolute;
+    z-index: 100;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    color: white;
+    background:rgba(0, 0, 0, .6);
+    padding-bottom: 2em;
+}
+
+.gallery-description p{
+    margin:1em;
+}
+
+@media (min-width: 40rem){
+    .gallery-item{
+        width: 50%;
+        float: left;
+    }
+}
+@media (min-width: 60rem){
+    .gallery-item{
+        width: 33.333%;
+        overflow: hidden;
+    }
+    .gallery-description{
+        transform: translateY(150%);
+    }
+    .gallery-item:hover .gallery-description{
+        transform: translateY(0%);
+    }
+}
+
+/* CTA
+----------------*/
+
+.cta {
+    background-color: springgreen;
+    padding: 6em 0;
+    color: black;
+}
+
+
+/* Footer
+----------------*/
+
+footer{
+    background-color: #232323;
+    color: white;
+    padding:5em 0;
+    float: left;
 }
