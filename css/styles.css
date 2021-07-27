@@ -337,18 +337,18 @@ nav a:focus{
         float: left;
     }
 }
-/* @media (min-width: 60rem){
+@media (min-width: 60rem){
     .gallery-item{
         width: 33.333%;
         overflow: hidden;
     }
-    .gallery-description{
+    /* .gallery-description{
         transform: translateY(150%);
     }
     .gallery-item:hover .gallery-description{
         transform: translateY(0%);
-    }
-} */
+    } */
+}
 
 /* CTA
 ----------------*/
