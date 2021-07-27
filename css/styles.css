@@ -331,7 +331,7 @@ nav a:focus{
     margin:1em;
 }
 
-@media (min-width: 40rem){
+/* @media (min-width: 40rem){
     .gallery-item{
         width: 50%;
         float: left;
@@ -348,7 +348,7 @@ nav a:focus{
     .gallery-item:hover .gallery-description{
         transform: translateY(0%);
     }
-}
+} */
 
 /* CTA
 ----------------*/
