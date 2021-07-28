@@ -8,7 +8,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:wght@300;400;700;900');
 
 *{
     box-sizing: border-box;
-    transition: linear 100ms;
+    transition: linear 300ms;
 }
 
 body{
