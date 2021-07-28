@@ -1,9 +1,14 @@
 @import 
 url('https://fonts.googleapis.com/css?family=Raleway:wght@300;400;700;900');
 
+:root{
+    --blue: #2596be;
+    --accent: #98d4dc;
+}
+
 *{
     box-sizing: border-box;
-    /* transition: all ease-in-out 250ms; */
+    transition: all ease-in-out 250ms;
 }
 
 body{
@@ -19,6 +24,7 @@ img{
 
 .logo{
     display: none;
+    height: 10rem;
 }
 
 /* column system
@@ -35,7 +41,7 @@ img{
 }
 
 .col-1{
-    width: 33.3333%;
+    width: 50%;
     float: left;
 }
 
@@ -61,7 +67,7 @@ img{
     }
     
     .col-1{
-        width: 16.6666%;
+        width: 25%;
     }
 }
 
@@ -128,6 +134,7 @@ footer::after{
     font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
+    border-color: var(--accent);
     border-width: 2px;
     border-style: solid;
     padding: .5em 1.75em;
@@ -139,14 +146,16 @@ footer::after{
 }
 
 .button-accent{
-    color: springgreen;
-    border-color: springgreen;
+    background:var(--blue);
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 .button-accent:hover,
 .button-accent:focus{
-    background:springgreen;
-    color: #232323;
+    color: var(--blue);
+    border-color: var(--blue);
+    background:var(--accent);
 }
 
 .button-dark{
@@ -157,7 +166,7 @@ footer::after{
 .button-dark:hover,
 .button-dark:focus{
     background:#232323;
-    color: springgreen;
+    color: var(--blue);
 }
 
 @media (mind-width:60rem){
@@ -192,13 +201,16 @@ nav a{
     text-transform: uppercase;
     font-size: .8rem;
     padding: .5em;
-    background: royalblue;
-    color: snow;
+    background: var(--blue);
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 nav a:hover,
 nav a:focus{
-    color: lightblue;
+    background: var(--accent);
+    color: var(--blue);
+    border-color: var(--blue);
 }
 
 
@@ -232,10 +244,33 @@ nav a:focus{
 } 
 
 .headertext{
-    color:springgreen;
+    color:var(--accent);
     background-clip: content-box;
-    background-color: rgba(59, 87, 172, 0.45);
+    background-color: rgba(27, 150, 190, .6);
 }
+
+/* home-gallery
+----------------*/
+
+.home-gallery{
+    background-size: cover;
+    background-position: center;
+    padding-top: 10em;
+}
+
+@media (min-width:60rem){
+    .home-hero{
+        height: 100vh;
+        padding-top: 40vh;
+    }
+} 
+
+.headertext{
+    color:var(--accent);
+    background-clip: content-box;
+    background-color: rgba(27, 150, 190, .6);
+}
+
 
 
 /* home-about
@@ -246,7 +281,7 @@ nav a:focus{
     padding:4em;
     width: 100vw;
     margin-left: -2.5vw;
-    outline: 2px solid springgreen;
+    outline: 2px solid var(--blue);
     outline-offset: -3em;
     color: white;
     position: relative;
@@ -254,7 +289,7 @@ nav a:focus{
 }
 
 .home-about-textbox h1{
-    color: springgreen;
+    color: var(--blue);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -280,6 +315,7 @@ nav a:focus{
     }
     .home-about{
         background-image: url(../img/about.jpg);
+        background-position-x:50%;
         background-repeat: no-repeat;
         padding:5em;
     }
@@ -298,6 +334,8 @@ nav a:focus{
     left: 0;
     transform: translateX(0);
 }
+
+
 
 /* gallery
 ----------------*/
@@ -342,13 +380,34 @@ nav a:focus{
         width: 33.333%;
         overflow: hidden;
     }
+    .gallery-description{
+        transform: translateY(150%);
+    }
+    .gallery-item:hover .gallery-description{
+        transform: translateY(0%);
+    }
 }
+
+/* Alul működő kód, lent a deploy animáció */
+
+/* @media (min-width: 40rem){
+    .gallery-item{
+        width: 50%;
+        float: left;
+    }
+}
+@media (min-width: 60rem){
+    .gallery-item{
+        width: 33.333%;
+        overflow: hidden;
+    }
+} */
 
 /* CTA
 ----------------*/
 
 .cta {
-    background-color: springgreen;
+    background-color: var(--blue);
     padding: 6em 0;
     color: black;
 }
@@ -362,4 +421,50 @@ footer{
     color: white;
     padding:5em 0;
     float: left;
+}
+
+/* Contact
+----------------*/
+.contact-list{
+
+}
+
+
+/* Contact column system
+----------------*/
+
+.contact-list{
+    width: 100%;
+    margin-top: 1em;
+}
+
+.contact-list:first-child{
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.contact-list{
+    width: 33%;
+    float: left;
+}
+
+@media(min-width: 40rem){
+    .contact-list{
+        float: left;
+        padding: 0 .5em;
+        margin-top: 0;
+    }
+
+    .contact-list:first-child{
+        padding-left: 0;
+    
+    }
+
+    .contact-list:last-child{
+        padding-right: 0;
+    }
+
+    .contact-list{
+        width: 33%;
+    }
 }
