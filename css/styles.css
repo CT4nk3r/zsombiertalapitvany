@@ -8,7 +8,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:wght@300;400;700;900');
 
 *{
     box-sizing: border-box;
-    /* transition: all ease-in-out 250ms; */
+    transition: all ease-in-out 250ms;
 }
 
 body{
@@ -378,14 +378,14 @@ nav a:focus{
 @media (min-width: 60rem){
     .gallery-item{
         width: 33.333%;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
-    /* .gallery-description{
+    .gallery-description{
         transform: translateY(150%);
     }
     .gallery-item:hover .gallery-description{
         transform: translateY(0%);
-    } */
+    }
 }
 
 /* Alul működő kód, lent a deploy animáció */
