@@ -8,7 +8,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:wght@300;400;700;900');
 
 *{
     box-sizing: border-box;
-    transition: all ease-in-out 250ms;
+    transition: linear 100ms;
 }
 
 body{
@@ -224,7 +224,6 @@ nav a:focus{
     }
 }
 
-
 /* home-hero
 ----------------*/
 
@@ -243,11 +242,20 @@ nav a:focus{
     }
 } 
 
+/* .headertext{
+    color:var(--accent);
+    background-clip: content-box;
+    background-color: rgba(27, 150, 190, 75);
+    margin-top: 10rem;
+} */
+
 .headertext{
     color:var(--accent);
     background-clip: content-box;
-    background-color: rgba(27, 150, 190, .6);
+    background-color: rgba(27, 150, 190, 75);
+    margin-top: 10rem;
 }
+
 
 /* home-gallery
 ----------------*/
@@ -264,12 +272,6 @@ nav a:focus{
         padding-top: 40vh;
     }
 } 
-
-.headertext{
-    color:var(--accent);
-    background-clip: content-box;
-    background-color: rgba(27, 150, 190, .6);
-}
 
 
 
@@ -388,21 +390,6 @@ nav a:focus{
     }
 }
 
-/* Alul működő kód, lent a deploy animáció */
-
-/* @media (min-width: 40rem){
-    .gallery-item{
-        width: 50%;
-        float: left;
-    }
-}
-@media (min-width: 60rem){
-    .gallery-item{
-        width: 33.333%;
-        overflow: hidden;
-    }
-} */
-
 /* CTA
 ----------------*/
 
@@ -423,41 +410,48 @@ footer{
     float: left;
 }
 
-/* Contact column system
+/* Contact
 ----------------*/
 
-.contact-list{
+.founders{
     width: 100%;
-    margin-top: 1em;
+    align-content: center;
+    background-color: var(--blue);
 }
 
-.contact-list:first-child{
-    padding-left: 0;
-    margin-top: 0;
+.founders-paragraph{
+    font-size: 1.5rem;
 }
 
-.contact-list{
-    width: 33%;
-    float: left;
+.founder-text{
+    color: white;
+    background-color: var(--blue);
+    font-size: 2rem;
 }
 
 @media(min-width: 40rem){
-    .contact-list{
+    .founders{
         float: left;
         padding: 0 .5em;
         margin-top: 0;
     }
-
-    .contact-list:first-child{
+    .founders:first-child{
         padding-left: 0;
-    
     }
 
-    .contact-list:last-child{
+    .founders:last-child{
         padding-right: 0;
     }
 
-    .contact-list{
-        width: 33%;
+    .founders{
+        width: 100%;
+    }
+
+    .founder-item1{
+        float: left;
+    }
+
+    .founder-item2{
+        float: right;
     }
 }
